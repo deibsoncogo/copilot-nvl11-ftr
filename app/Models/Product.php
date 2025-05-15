@@ -12,4 +12,9 @@ class Product extends Model
         "price",
         "stock",
     ];
+
+    public function customer(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Customer::class);
+    }
 }
